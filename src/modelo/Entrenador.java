@@ -1,6 +1,7 @@
 package modelo;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Entrenador {
 
@@ -79,6 +80,24 @@ public class Entrenador {
 	public void setActivo(boolean activo) {
 		this.activo = activo;
 	}
-	
-	
+	public String toString (){
+		return "Entrenador "+nombre+" "+ apellido +", dni= "+dni+", idEntrenador= "+idEntrenador +", fecha de nacimiento "
+		+fechaNacimiento+", estrategia favorita "+estrategiaFavorita +", estado=" + (activo ? "Activo" : "Inactivo");
+		
+	}
+
+	public void darDeBajaEntrenador (List<Entrenador> listaEntrenadores, int idEntrenador){
+		for(Entrenador entrenador: listaEntrenadores ){
+			if (entrenador.getIdEntrenador()== idEntrenador) {
+				entrenador.setActivo(false);
+				System.out.println("");
+				System.out.println("¡¡¡El entrenador "+ entrenador.getNombre() +" " + entrenador.getApellido()+ " se a dado de baja!!!" );
+				System.out.println("");
+				return;
+			}
+
+		}
+		System.out.println("No se a encontrado ningun entrenador con su id: "+idEntrenador);
+	}
+
 }
