@@ -67,7 +67,9 @@ public class Equipo {
 		this.activo = activo;
 	}
 	
-	
+	public String toString(){
+		return "El equipo " + nombre + ", Codigo " + codigo+ ", id "+idEquipo+", estado:" +(activo ? "Activo":"Inactivo");
+	}
 	
 	
 	

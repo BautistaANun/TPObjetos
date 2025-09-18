@@ -1,6 +1,7 @@
 package modelo;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Jugador {
 	private String nombre;
@@ -108,5 +109,9 @@ public class Jugador {
 		this.activo = activo;
 	}
 	
-	
+	public String toString(){
+		return "Nombre "+nombre+", apellido "+apellido+", dni "+dni+", id "+idJugador+", fecha de nacimiento "
+		+fechaNacimiento+", estatura "+estatura+", peso "+peso+", posicion "+posicion+ ", numero de camiseta "+nroDeCamiseta+
+		", estado: "+(activo ? "Activo" : "Inactivo");
+	}
 }

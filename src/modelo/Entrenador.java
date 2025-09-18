@@ -86,18 +86,4 @@ public class Entrenador {
 		
 	}
 
-	public void darDeBajaEntrenador (List<Entrenador> listaEntrenadores, int idEntrenador){
-		for(Entrenador entrenador: listaEntrenadores ){
-			if (entrenador.getIdEntrenador()== idEntrenador) {
-				entrenador.setActivo(false);
-				System.out.println("");
-				System.out.println("¡¡¡El entrenador "+ entrenador.getNombre() +" " + entrenador.getApellido()+ " se a dado de baja!!!" );
-				System.out.println("");
-				return;
-			}
-
-		}
-		System.out.println("No se a encontrado ningun entrenador con su id: "+idEntrenador);
-	}
-
 }
