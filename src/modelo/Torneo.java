@@ -17,7 +17,6 @@ public class Torneo {
 	
 	public Torneo(String nombre, int idTorneo, String temporada, LocalDate fechaInicio, LocalDate fechaFin,
 			List<Equipo> equipos) {
-		super();
 		this.nombre = nombre;
 		this.idTorneo = idTorneo;
 		this.temporada = temporada;
@@ -65,10 +64,10 @@ public class Torneo {
 	
 	public String toString(){
 		String listaEquipos = equipos.stream()
-		.map(->equipo-> equipo.getNombre())
-		.Collect(Collectors.joining(", "));
+		.map(equipo-> equipo.getNombre())
+		.collect(Collectors.joining(", "));
 
-		return "El torneo "+ nombre +", id "+getIdTorneo +", de la temporada "+temporada+", fecha de inicio "+fechaInicio +
+		return "El torneo "+ nombre +", id "+getIdTorneo() +", de la temporada "+temporada+", fecha de inicio "+fechaInicio +
 		", fecha de cierre "+fechaFin + ", tiene estos equipos: "+ listaEquipos;
 	}
 	

@@ -18,6 +18,9 @@ public class Equipo {
 		this.jugador = jugador;
 		this.entrenador = entrenador;
 	}
+	public Equipo(String nombre){
+		this.nombre = nombre;
+	}
 
 	public String getNombre() {
 		return nombre;
