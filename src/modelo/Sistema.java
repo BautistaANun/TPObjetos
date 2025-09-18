@@ -1,5 +1,6 @@
 package modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sistema {
@@ -9,12 +10,12 @@ public class Sistema {
 	private List<Jugador> jugadores;
 	private List<Torneo> torneos;
 	
-	public Sistema(List<Entrenador> entrenadores, List<Equipo> equipos, List<Jugador> jugadores, List<Torneo> torneos) {
+	public Sistema() {
 		super();
-		this.entrenadores = entrenadores;
-		this.equipos = equipos;
-		this.jugadores = jugadores;
-		this.torneos = torneos;
+		this.entrenadores = new ArrayList<Entrenador>();
+		this.equipos = new ArrayList<Equipo>();
+		this.jugadores = new ArrayList<Jugador>();
+		this.torneos = new ArrayList<Torneo>();
 	}
 
 	public List<Entrenador> getEntrenadores() {

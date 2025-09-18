@@ -1,6 +1,7 @@
 package modelo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,20 +13,20 @@ public class Torneo {
 	private String temporada;
 	private LocalDate fechaInicio;
 	private LocalDate fechaFin;
-	private List<Equipo> equipos;
+	private List<Equipo> equipos; ///SEGUIR ESTE PATRON
 	private boolean activo = true;
+	
 
 	
-	
-	public Torneo(String nombre, int idTorneo, String temporada, LocalDate fechaInicio, LocalDate fechaFin,
-			List<Equipo> equipos) {
+	public Torneo(String nombre, int idTorneo, String temporada, LocalDate fechaInicio, LocalDate fechaFin) {
 		super();
 		this.nombre = nombre;
 		this.idTorneo = idTorneo;
 		this.temporada = temporada;
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
-		this.equipos = equipos;
+		this.equipos = new ArrayList<Equipo>(); ///SEGUIR ESTE PATRON EN  LAS DEMAS CLASES 
+		
 	}
 	public String getNombre() {
 		return nombre;
@@ -60,9 +61,6 @@ public class Torneo {
 	public List<Equipo> getEquipos() {
 		return equipos;
 	}
-	public void setEquipos(List<Equipo> equipos) {
-		this.equipos = equipos;
-	}
 	
 	public boolean isActivo() {
     return activo;
@@ -75,8 +73,6 @@ public class Torneo {
 	public void deshabilitarTorneo() {
     this.activo = false;
 }
-
-
 
 	public String toString(){
 		String listaEquipos = equipos.stream()
