@@ -13,6 +13,8 @@ public class Torneo {
 	private LocalDate fechaInicio;
 	private LocalDate fechaFin;
 	private List<Equipo> equipos;
+	private boolean activo = true;
+
 	
 	
 	public Torneo(String nombre, int idTorneo, String temporada, LocalDate fechaInicio, LocalDate fechaFin,
@@ -62,14 +64,30 @@ public class Torneo {
 		this.equipos = equipos;
 	}
 	
-	
+	public boolean isActivo() {
+    return activo;
+	}
+
+	public void setActivo(boolean activo) {
+    this.activo = activo;
+	}
+
+	public void deshabilitarTorneo() {
+    this.activo = false;
+}
+
+
+
 	public String toString(){
 		String listaEquipos = equipos.stream()
-		.map(->equipo-> equipo.getNombre())
-		.Collect(Collectors.joining(", "));
+		.map(equipo-> equipo.getNombre())
+		.collect(Collectors.joining(", "));
 
-		return "El torneo "+ nombre +", id "+getIdTorneo +", de la temporada "+temporada+", fecha de inicio "+fechaInicio +
+		return "El torneo "+ nombre +", id "+ getIdTorneo() +", de la temporada "+temporada+", fecha de inicio "+fechaInicio +
 		", fecha de cierre "+fechaFin + ", tiene estos equipos: "+ listaEquipos;
 	}
+
+
+	
 	
 }

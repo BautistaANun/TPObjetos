@@ -1,6 +1,7 @@
 package modelo;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Partido {
 
@@ -47,6 +48,7 @@ public class Partido {
 	public void setActivo(boolean activo) {
 		this.activo = activo;
 	}
+	
 	
 	
 }
