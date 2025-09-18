@@ -2,6 +2,7 @@ package modelo;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class Torneo {
@@ -61,5 +62,14 @@ public class Torneo {
 		this.equipos = equipos;
 	}
 	
+	
+	public String toString(){
+		String listaEquipos = equipos.stream()
+		.map(->equipo-> equipo.getNombre())
+		.Collect(Collectors.joining(", "));
+
+		return "El torneo "+ nombre +", id "+getIdTorneo +", de la temporada "+temporada+", fecha de inicio "+fechaInicio +
+		", fecha de cierre "+fechaFin + ", tiene estos equipos: "+ listaEquipos;
+	}
 	
 }
