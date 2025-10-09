@@ -49,5 +49,12 @@ public class Sistema {
 		this.torneos = torneos;
 	}
 	
-	
+	public void darDeBajaJugador(String nombre, String apellido){
+		for (Jugador j : jugadores {
+			if(j.getNombre().equalsIgnoreCase(nombre) && j.getApellido().equalsIgnoreCase(apellido){
+				j.setActivo(false);
+				System.out.println("Jugador " + nombre + apellido "dado de baja");
+			}
+		}
+	}
 }
