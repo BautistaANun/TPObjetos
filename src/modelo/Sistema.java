@@ -48,6 +48,17 @@ public class Sistema {
 	public void setTorneos(List<Torneo> torneos) {
 		this.torneos = torneos;
 	}
-	
+	//agregar
+	public boolean agregarJugador  (){
+		int =1;
+		if(!this.lstJugador.isEmpty()){
+			id=this.lstJugador.get(this.lstJugador.size()){
+				id=this.lstJugador.get(this.lstJugador.size()-1.getIdJugador()+1;
+			}
+			return this.lstJugador.add(new Jugador(,,,));
+		}
+		
+		
+	}
 	
 }
